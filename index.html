@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#videos">Videos</a>
+        <a href="#updates">Updates</a>
+        <a href="#about">About Us</a>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="myFunction()">Contact Us
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="myDropdown">
+                <a href="#facebook">Facebook</a>
+                <a href="#instagram">Instagram</a>
+                <a href="#twitter">Twitter</a>
+            </div>
+        </div>
+    </div>
+
+    <div style="padding-left:16px">
+        <h2>GirlScript Vellore</h2>
+        <p>Tech For Good</p>
+    </div>
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        window.onclick = function (e) {
+            if (!e.target.matches('.dropbtn')) {
+                var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown.classList.contains('show')) {
+                    myDropdown.classList.remove('show');
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
